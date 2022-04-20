@@ -21,29 +21,28 @@ public class Radio100 {
     if (currentSound < 10) {
       currentSound = currentSound + 1;
     }
+    if (currentSound > 9) {
+      currentSound = 10;
+    }
   }
 
   public void reduceSound() { // уменьшение звука на -1
     if (currentSound < 10) {
       currentSound = currentSound - 1;
-    }
-    if (currentSound < 11){
-      currentSound = currentSound - 1;
+    } else {
+      currentSound = 9;
     }
   }
 
-  public void reduceSoundMin() { //если значение звука меньше 0
-    if (currentSound < 0) {
-      currentSound = 0;
-    }
-  }
-    public void reduceSoundMax() { //если значение звука больше 10
-      if (currentSound > 10) {
-        currentSound = 10;
+    public void reduceSound0() { // уменьшение звука на -1
+      if (currentSound == 0) {
+        currentSound = 0;
       }
-
+      return;
     }
   }
+
+
 
 
 
