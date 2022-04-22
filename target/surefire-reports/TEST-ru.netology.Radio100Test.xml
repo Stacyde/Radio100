@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.Radio100Test" time="0.174" tests="20" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.Radio100Test" time="0.149" tests="31" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Temp\surefire9140307922458656493\surefirebooter18100438012104452069.jar C:\Temp\surefire9140307922458656493 2022-04-20T16-16-54_269-jvmRun1 surefire13931910852123550895tmp surefire_014865018041754044047tmp"/>
+    <property name="sun.java.command" value="C:\Temp\surefire5140238714009139948\surefirebooter16685343769129459442.jar C:\Temp\surefire5140238714009139948 2022-04-22T12-00-55_582-jvmRun1 surefire2856855643011050008tmp surefire_03086338976325473086tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\StacyRadio\target\test-classes;C:\StacyRadio\target\classes;C:\Users\Пользователь\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\Пользователь\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Пользователь\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Пользователь\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Пользователь\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Пользователь\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\Пользователь\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Пользователь\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Temp\surefire9140307922458656493\surefirebooter18100438012104452069.jar"/>
+    <property name="surefire.real.class.path" value="C:\Temp\surefire5140238714009139948\surefirebooter16685343769129459442.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.11+9"/>
@@ -61,24 +61,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="minSound" classname="ru.netology.Radio100Test" time="0.142"/>
+  <testcase name="Sound0" classname="ru.netology.Radio100Test" time="0.042"/>
+  <testcase name="minSound" classname="ru.netology.Radio100Test" time="0.001"/>
+  <testcase name="increaseStation0" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="increaseStation8" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="increaseStation9" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="increaseSoundMax" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="increaseSound" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="maxStation" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="Sound11" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="Sound_1" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound1" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound2" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound3" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound4" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceSound0" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="reduceSound5" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound6" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound7" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSound8" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="reduceSound9" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="increaseSound0" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="increaseSound9" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="Station10" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="Station_1" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceStation0" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceStation1" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceStation5" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceStation9" classname="ru.netology.Radio100Test" time="0.001"/>
+  <testcase name="increaseSound0" classname="ru.netology.Radio100Test" time="0.001"/>
   <testcase name="maxSound" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSoundMax" classname="ru.netology.Radio100Test" time="0"/>
-  <testcase name="reduceSoundMin" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="currentStation" classname="ru.netology.Radio100Test" time="0.022"/>
+  <testcase name="reduceSound" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceSound10" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="Station1" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="reduceStation" classname="ru.netology.Radio100Test" time="0"/>
   <testcase name="currentSound" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="increaseSound10" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="minStation" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="increaseStation" classname="ru.netology.Radio100Test" time="0"/>
+  <testcase name="StationMax" classname="ru.netology.Radio100Test" time="0"/>
 </testsuite>

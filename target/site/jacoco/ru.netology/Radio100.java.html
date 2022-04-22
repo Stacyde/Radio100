@@ -2,45 +2,75 @@
 
 <span class="fc" id="L3">public class Radio100 {</span>
   private int currentSound; // объект радио запоминает текущий уровень звука (только для нас - private, для других public)
+  private int currentStation;
 
   public int getCurrentSound() {  //метод для отдачи текущего звука
-<span class="fc" id="L7">    return currentSound;</span>
+<span class="fc" id="L8">    return currentSound;</span>
+  }
+
+  public int getCurrentStation() { //метод для отдачи текущий станции
+<span class="fc" id="L12">    return currentStation;</span>
   }
 
   public void setCurrentSound(int newCurrentSound) { // принимает значение от 0 до 10
-<span class="fc bfc" id="L11" title="All 2 branches covered.">    if (newCurrentSound &lt; 0) {</span>
-<span class="fc" id="L12">      return;</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">    if (newCurrentSound &lt; 0) {</span>
+<span class="fc" id="L17">      return;</span>
     }
-<span class="fc bfc" id="L14" title="All 2 branches covered.">    if (newCurrentSound &gt; 10) {</span>
-<span class="fc" id="L15">      return;</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">    if (newCurrentSound &gt; 10) {</span>
+<span class="fc" id="L20">      return;</span>
     }
-<span class="fc" id="L17">    currentSound = newCurrentSound;</span>
-<span class="fc" id="L18">  }</span>
+<span class="fc" id="L22">    currentSound = newCurrentSound;</span>
+<span class="fc" id="L23">  }</span>
 
-  public void increaseSound() { // увеличение звука на +1
-<span class="fc bfc" id="L21" title="All 2 branches covered.">    if (currentSound &lt; 10) {</span>
-<span class="fc" id="L22">      currentSound = currentSound + 1;</span>
+  public void setCurrentStation(int newCurrentStation) { // принимает значение от 0 до 9
+<span class="fc bfc" id="L26" title="All 2 branches covered.">    if (newCurrentStation &lt; 0) {</span>
+<span class="fc" id="L27">      return;</span>
     }
-<span class="fc bfc" id="L24" title="All 2 branches covered.">    if (currentSound &gt; 9) {</span>
-<span class="fc" id="L25">      currentSound = 10;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    if (newCurrentStation &gt; 9) {</span>
+<span class="fc" id="L30">      return;</span>
     }
-<span class="fc" id="L27">  }</span>
+<span class="fc" id="L32">    currentStation = newCurrentStation;</span>
+<span class="fc" id="L33">  }</span>
 
-  public void reduceSound() { // уменьшение звука на -1
-<span class="fc bfc" id="L30" title="All 2 branches covered.">    if (currentSound &lt; 10) {</span>
-<span class="fc" id="L31">      currentSound = currentSound - 1;</span>
+  public void increaseSound() {  //+1 sound
+<span class="fc bfc" id="L36" title="All 2 branches covered.">    if (currentSound &lt; 10) {</span>
+<span class="fc" id="L37">      currentSound = currentSound + 1;</span>
     } else {
-<span class="fc" id="L33">      currentSound = 9;</span>
+<span class="fc" id="L39">      currentSound = 10;</span>
     }
-<span class="fc" id="L35">  }</span>
+<span class="fc" id="L41">  }</span>
 
-    public void reduceSound0() { // уменьшение звука на -1
-<span class="pc bpc" id="L38" title="1 of 2 branches missed.">      if (currentSound == 0) {</span>
-<span class="fc" id="L39">        currentSound = 0;</span>
-      }
-<span class="fc" id="L41">      return;</span>
+  public void increaseStation() {  //  на +1 станцию
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    if (currentStation &lt; 9) {</span>
+<span class="fc" id="L45">      currentStation = currentStation + 1;</span>
+    } else {
+<span class="fc" id="L47">      currentStation = 0;</span>
     }
+<span class="fc" id="L49">  }</span>
+
+  public void reduceSound() { //  звук на -1
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    if (currentSound &lt;= 0) {</span>
+<span class="fc" id="L53">      currentSound = 0;</span>
+    } else {
+
+<span class="fc" id="L56">        currentSound = currentSound - 1;</span>
+      }
+<span class="fc" id="L58">  }</span>
+
+  public void reduceStation() { //  станции на -1
+<span class="fc bfc" id="L61" title="All 2 branches covered.">    if (currentStation &lt;= 0) {</span>
+<span class="fc" id="L62">      currentStation = 9;</span>
+    } else {
+<span class="fc" id="L64">        currentStation = currentStation - 1;</span>
+
+      }
+<span class="fc" id="L67">    }</span>
+
+
   }
+
+
+
 
 
 

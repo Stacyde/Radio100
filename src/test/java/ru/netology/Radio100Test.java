@@ -38,7 +38,6 @@ class Radio100Test {
 
         assertEquals(expected, actual);
     }
-
     @Test
     public void Sound11() {
         Radio100 cond = new Radio100();
@@ -49,7 +48,16 @@ class Radio100Test {
 
         assertEquals(expected, actual);
     }
+    @Test
+    public void Sound0() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentSound(0);
 
+        int expected = 0;
+        int actual = cond.getCurrentSound();
+
+        assertEquals(expected, actual);
+    }
     @Test
     public void Sound_1() {
         Radio100 cond = new Radio100();
@@ -57,6 +65,36 @@ class Radio100Test {
 
         int expected = 0;
         int actual = cond.getCurrentSound();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void Station_1() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(-1);
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void Station10() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(10);
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void Station1() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(-1);
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
 
         assertEquals(expected, actual);
     }
@@ -74,36 +112,109 @@ class Radio100Test {
     }
 
     @Test
-    public void reduceSound8() {
+    public void increaseStation() {
         Radio100 cond = new Radio100();
-        cond.setCurrentSound(8);
+        cond.increaseStation(); // звук на +1
+
+        int expected = 1;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void reduceStation1() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(1);
+        cond.reduceStation(); // звук на -1
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void reduceStation() {
+        Radio100 cond = new Radio100();
+        cond.reduceStation(); // звук на -1
+
+        int expected = 9;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void reduceStation0() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(0);
+        cond.reduceStation(); // звук на -1
+
+        int expected = 9;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void reduceStation9() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(9);
+        cond.reduceStation(); //  на -1
+
+
+        int expected = 8;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void reduceStation5() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(5);
+        cond.reduceStation(); //  на -1
+
+
+        int expected = 4;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void reduceSound() {
+        Radio100 cond = new Radio100();
         cond.reduceSound(); // звук на -1
 
-        int expected = 7;
+        int expected = 0;
+        int actual = cond.getCurrentSound();
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void reduceSound10() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentSound(10);
+        cond.reduceSound(); // звук на -1
+
+        int expected = 9;
         int actual = cond.getCurrentSound();
 
         assertEquals(expected, actual);
 
     }
     @Test
-    public void reduceSound7() {
+    public void reduceSound9() {
         Radio100 cond = new Radio100();
-        cond.setCurrentSound(7);
+        cond.setCurrentSound(9);
         cond.reduceSound(); // звук на -1
 
-        int expected = 6;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-    @Test
-    public void reduceSound6() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(6);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 5;
+        int expected = 8;
         int actual = cond.getCurrentSound();
 
         assertEquals(expected, actual);
@@ -122,59 +233,10 @@ class Radio100Test {
 
     }
     @Test
-    public void reduceSound4() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(4);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 3;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-    @Test
-    public void reduceSound3() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(3);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 2;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-    @Test
-    public void reduceSound2() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(2);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 1;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-    @Test
-    public void reduceSound1() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(1);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 0;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void reduceSoundMin() {
+    public void reduceSound0() {
         Radio100 cond = new Radio100();
         cond.setCurrentSound(0);
-        cond.reduceSound0(); // звук на -1
+        cond.reduceSound(); // звук на -1
 
         int expected = 0;
         int actual = cond.getCurrentSound();
@@ -184,42 +246,28 @@ class Radio100Test {
     }
 
     @Test
-    public void reduceSoundMax() {
+    public void increaseStation9() {
         Radio100 cond = new Radio100();
-        cond.setCurrentSound(10);
-        cond.reduceSound(); // звук на -1
+        cond.setCurrentStation(9);
+        cond.increaseStation(); // станция на +1
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void increaseStation8() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(8);
+        cond.increaseStation(); // станция на +1
 
         int expected = 9;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void reduceSound9() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(9);
-        cond.reduceSound(); // звук на -1
-
-        int expected = 8;
-        int actual = cond.getCurrentSound();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void increaseSound9() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(9);
-        cond.increaseSound(); // звук на +1
-
-        int expected = 10;
-        int actual = cond.getCurrentSound();
+        int actual = cond.getCurrentStation();
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void increaseSound0() {
         Radio100 cond = new Radio100();
@@ -245,5 +293,78 @@ class Radio100Test {
 
     }
 
+    @Test
+    public void currentStation() {
+        Radio100 cond = new Radio100(); //создай радио
+
+        int expected = 0;
+        int actual = cond.getCurrentStation(); //обращаемся к методу текущий станция
+
+        assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void minStation() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(0);
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void maxStation() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(9);
+
+        int expected = 9;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+
+
+
+    @Test
+    public void increaseStation0() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(0);
+        cond.increaseStation(); // станция на +1
+
+        int expected = 1;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+
+
+    @Test
+    public void StationMax() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentStation(10);
+
+        int expected = 0;
+        int actual = cond.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void increaseSound10() {
+        Radio100 cond = new Radio100();
+        cond.setCurrentSound(10);
+        cond.increaseSound(); // звук на +1
+
+        int expected = 10;
+        int actual = cond.getCurrentSound();
+
+        assertEquals(expected, actual);
+    }
+
+}
