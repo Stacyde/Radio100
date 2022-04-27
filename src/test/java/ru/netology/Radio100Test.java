@@ -5,10 +5,39 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Radio100Test {
+    @Test
+    public void shouldInitFieldsMaxSound(){
+        Radio100 radio100 = new Radio100(0,0,100,0,10,0);
+        assertEquals(100, radio100.getMaxSound());
+
+        Radio100 radio1001 = new Radio100();
+        assertEquals(100, radio1001.getMaxSound());
+    }
+    @Test
+    public void shouldInitFieldsMaxStation(){
+        Radio100 radio100 = new Radio100(0,0,100,0,10,0);
+        assertEquals(10, radio100.getMaxStation());
+    }
+    @Test
+    public void shouldInitFieldsMinSound(){
+        Radio100 radio100 = new Radio100(0,0,100,0,10,0);
+        assertEquals(0, radio100.getMinSound());
+    }
+    @Test
+    public void shouldInitFieldsMinStation(){
+        Radio100 radio100 = new Radio100(0,0,100,0,10,0);
+        assertEquals(0, radio100.getMinStation());
+    }
+    @Test
+    public void shouldInitFields(){
+        Radio100 radio100 = new Radio100(0,0,100,0,10,0);
+        assertEquals(100, radio100.getMaxSound());
+    }
+
 
     @Test
     public void currentSound() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
 
         int expected = 0;
         int actual = cond.getCurrentSound();
@@ -19,7 +48,7 @@ class Radio100Test {
 
     @Test
     public void minSound() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(0);
 
         int expected = 0;
@@ -30,7 +59,7 @@ class Radio100Test {
 
     @Test
     public void maxSound() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(10);
 
         int expected = 10;
@@ -39,9 +68,9 @@ class Radio100Test {
         assertEquals(expected, actual);
     }
     @Test
-    public void Sound11() {
-        Radio100 cond = new Radio100();
-        cond.setCurrentSound(11);
+    public void Sound101() {
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
+        cond.setCurrentSound(101);
 
         int expected = 0;
         int actual = cond.getCurrentSound();
@@ -50,7 +79,7 @@ class Radio100Test {
     }
     @Test
     public void sound0() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(0);
 
         int expected = 0;
@@ -60,7 +89,7 @@ class Radio100Test {
     }
     @Test
     public void sound_1() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(-1);
 
         int expected = 0;
@@ -70,7 +99,7 @@ class Radio100Test {
     }
     @Test
     public void station_1() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(-1);
 
         int expected = 0;
@@ -80,7 +109,7 @@ class Radio100Test {
     }
     @Test
     public void station10() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(10);
 
         int expected = 0;
@@ -90,7 +119,7 @@ class Radio100Test {
     }
     @Test
     public void station1() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(-1);
 
         int expected = 0;
@@ -101,7 +130,7 @@ class Radio100Test {
 
     @Test
     public void increaseSound() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.increaseSound();
 
         int expected = 1;
@@ -113,7 +142,7 @@ class Radio100Test {
 
     @Test
     public void increaseStation() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.increaseStation();
 
         int expected = 1;
@@ -124,7 +153,7 @@ class Radio100Test {
     }
     @Test
     public void reduceStation1() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(1);
         cond.reduceStation();
 
@@ -136,10 +165,10 @@ class Radio100Test {
     }
     @Test
     public void reduceStation() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.reduceStation();
 
-        int expected = 9;
+        int expected = 10;
         int actual = cond.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -147,11 +176,11 @@ class Radio100Test {
     }
     @Test
     public void reduceStation0() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(0);
         cond.reduceStation();
 
-        int expected = 9;
+        int expected = 10;
         int actual = cond.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -159,7 +188,7 @@ class Radio100Test {
     }
     @Test
     public void reduceStation9() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(9);
         cond.reduceStation();
 
@@ -172,7 +201,7 @@ class Radio100Test {
     }
     @Test
     public void reduceStation5() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(5);
         cond.reduceStation();
 
@@ -186,7 +215,7 @@ class Radio100Test {
 
     @Test
     public void reduceSound() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.reduceSound();
 
         int expected = 0;
@@ -198,7 +227,7 @@ class Radio100Test {
 
     @Test
     public void reduceSound10() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(10);
         cond.reduceSound();
 
@@ -210,7 +239,7 @@ class Radio100Test {
     }
     @Test
     public void reduceSound9() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(9);
         cond.reduceSound();
 
@@ -222,7 +251,7 @@ class Radio100Test {
     }
     @Test
     public void reduceSound5() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(5);
         cond.reduceSound();
 
@@ -234,7 +263,7 @@ class Radio100Test {
     }
     @Test
     public void reduceSound0() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentSound(0);
         cond.reduceSound();
 
@@ -247,7 +276,7 @@ class Radio100Test {
 
     @Test
     public void increaseStation9() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(0,0,100,0,10,0);
         cond.setCurrentStation(9);
         cond.increaseStation();
 
@@ -283,10 +312,10 @@ class Radio100Test {
     @Test
     public void increaseSoundMax() {
         Radio100 cond = new Radio100();
-        cond.setCurrentSound(10);
+        cond.setCurrentSound(100);
         cond.increaseSound();
 
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentSound();
 
         assertEquals(expected, actual);
@@ -356,12 +385,12 @@ class Radio100Test {
 
 
     @Test
-    public void increaseSound10() {
+    public void increaseSound100() {
         Radio100 cond = new Radio100();
-        cond.setCurrentSound(10);
+        cond.setCurrentSound(100);
         cond.increaseSound();
 
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentSound();
 
         assertEquals(expected, actual);

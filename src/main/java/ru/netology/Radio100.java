@@ -1,22 +1,52 @@
 package ru.netology;
 
 public class Radio100 {
-    private int currentSound;
-    private int currentStation;
 
-    public int getCurrentSound() {
-        return currentSound;
+    private int currentSound = 0;
+    private int currentStation = 0;
+    private int maxSound = 100;
+    private int minSound = 0;
+    private int maxStation = 10;
+    private int minStation = 0;
+
+    public Radio100 (){
     }
 
-    public int getCurrentStation() { //метод для отдачи текущий станции
-        return currentStation;
+    public Radio100(int currentSound, int currentStation, int maxSound, int minSound, int maxStation, int minStation) {
+        this.currentSound = currentSound;
+        this.currentStation = currentStation;
+        this.maxSound = maxSound;
+        this.minSound = minSound;
+        this.maxStation = maxStation;
+        this.minStation = minStation;
     }
+
+    public int getCurrentSound() {return currentSound;}
+
+
+    public int getCurrentStation() {return currentStation;}
+
+    public int getMaxSound() { return maxSound; }
+
+    public void setMaxSound(int maxSound){this.maxSound = maxSound;}
+
+    public int getMaxStation() {return maxStation;}
+
+    public void setMaxStation(int maxStation){this.maxStation = maxStation;}
+
+    public int getMinSound() {return minSound;}
+
+    public void setMinSound(int minSound){this.minSound = minSound;}
+
+    public int getMinStation() {return minStation;}
+
+    public void setMinStation(int minStation){this.minStation = minStation;}
 
     public void setCurrentSound(int newCurrentSound) {
         if (newCurrentSound < 0) {
             return;
         }
-        if (newCurrentSound > 10) {
+        if (newCurrentSound > 100) {
             return;
         }
         currentSound = newCurrentSound;
@@ -33,10 +63,10 @@ public class Radio100 {
     }
 
     public void increaseSound() {
-        if (currentSound < 10) {
+        if (currentSound < 100) {
             currentSound = currentSound + 1;
         } else {
-            currentSound = 10;
+            currentSound = 100;
         }
     }
 
@@ -59,7 +89,7 @@ public class Radio100 {
 
     public void reduceStation() {
         if (currentStation <= 0) {
-            currentStation = 9;
+            currentStation = 10;
         } else {
             currentStation = currentStation - 1;
 
