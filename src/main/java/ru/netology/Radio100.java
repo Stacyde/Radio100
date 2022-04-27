@@ -8,21 +8,20 @@ public class Radio100 {
     private int minSound = 0;
     private int maxStation = 9;
     private int minStation = 0;
+    private int numberStation = 10;
 
     public Radio100 (){
     }
 
-    public Radio100(int currentSound, int currentStation, int maxSound, int minSound, int maxStation, int minStation) {
-        this.currentSound = currentSound;
-        this.currentStation = currentStation;
-        this.maxSound = maxSound;
-        this.minSound = minSound;
-        this.maxStation = maxStation;
-        this.minStation = minStation;
+    public Radio100(int numberStation) {
+        this.numberStation = numberStation;
     }
 
-    public int getCurrentSound() {return currentSound;}
+    public int getNumberStation(){return numberStation;}
 
+    public void setNumberStation(int numberStation){this.numberStation = numberStation;}
+
+    public int getCurrentSound() {return currentSound;}
 
     public int getCurrentStation() {return currentStation;}
 
