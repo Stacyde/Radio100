@@ -6,7 +6,7 @@ public class Radio100 {
     private int currentStation = 0;
     private int maxSound = 100;
     private int minSound = 0;
-    private int maxStation = 10;
+    private int maxStation = 9;
     private int minStation = 0;
 
     public Radio100 (){
