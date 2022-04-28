@@ -27,8 +27,6 @@ public class Radio100 {
         }
         if (newNumberStation >= 10) {
             return;
-        } else {
-            numberStation = 10;
         }
         numberStation = newNumberStation;
     }
