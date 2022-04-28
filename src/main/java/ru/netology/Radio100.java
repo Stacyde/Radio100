@@ -10,36 +10,68 @@ public class Radio100 {
     private int minStation = 0;
     private int numberStation = 10;
 
-    public Radio100 (){
+    public Radio100() {
     }
 
     public Radio100(int numberStation) {
         this.numberStation = numberStation;
     }
 
-    public int getNumberStation(){return numberStation;}
+    public int getNumberStation() {
+        return numberStation;
+    }
 
-    public void setNumberStation(int numberStation){this.numberStation = numberStation;}
+    public void setNumberStation(int newNumberStation) {
+        if (newNumberStation < 0) {
+            return;
+        }
+        if (newNumberStation >= 10) {
+            return;
+        } else {
+            numberStation = 10;
+        }
+        numberStation = newNumberStation;
+    }
 
-    public int getCurrentSound() {return currentSound;}
+    public int getCurrentSound() {
+        return currentSound;
+    }
 
-    public int getCurrentStation() {return currentStation;}
+    public int getCurrentStation() {
+        return currentStation;
+    }
 
-    public int getMaxSound() { return maxSound; }
+    public int getMaxSound() {
+        return maxSound;
+    }
 
-    public void setMaxSound(int maxSound){this.maxSound = maxSound;}
+    public void setMaxSound(int maxSound) {
+        this.maxSound = maxSound;
+    }
 
-    public int getMaxStation() {return maxStation;}
+    public int getMaxStation() {
+        return maxStation;
+    }
 
-    public void setMaxStation(int maxStation){this.maxStation = maxStation;}
+    public void setMaxStation(int maxStation) {
+        this.maxStation = maxStation;
+    }
 
-    public int getMinSound() {return minSound;}
+    public int getMinSound() {
+        return minSound;
+    }
 
-    public void setMinSound(int minSound){this.minSound = minSound;}
+    public void setMinSound(int minSound) {
+        this.minSound = minSound;
+    }
 
-    public int getMinStation() {return minStation;}
+    public int getMinStation() {
+        return minStation;
+    }
 
-    public void setMinStation(int minStation){this.minStation = minStation;}
+    public void setMinStation(int minStation) {
+        this.minStation = minStation;
+    }
 
     public void setCurrentSound(int newCurrentSound) {
         if (newCurrentSound < 0) {

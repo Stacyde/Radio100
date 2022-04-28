@@ -12,6 +12,118 @@ class Radio100Test {
     }
 
     @Test
+    public void numberStation5() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(5);
+
+        int expected = 5;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void numberStation_1() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(-1);
+
+        int expected = 10;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void numberStation7() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(7);
+
+        int expected = 7;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void numberStation15() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(15);
+
+        int expected = 10;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void numberStation0() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(0);
+
+        int expected = 0;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void maxSound100() {
+        Radio100 cond = new Radio100();
+        cond.setMaxSound(100);
+
+        int expected = 100;
+        int actual = cond.getMaxSound();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void minSound0() {
+        Radio100 cond = new Radio100();
+        cond.setMinSound(0);
+
+        int expected = 0;
+        int actual = cond.getMinSound();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void minStation0() {
+        Radio100 cond = new Radio100();
+        cond.setMinStation(0);
+
+        int expected = 0;
+        int actual = cond.getMinStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void maxStation9() {
+        Radio100 cond = new Radio100();
+        cond.setMaxStation(9);
+
+        int expected = 9;
+        int actual = cond.getMaxStation();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void numberStation3() {
+        Radio100 cond = new Radio100(3);
+        int expected = 3;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void numberStation10() {
+        Radio100 cond = new Radio100();
+        cond.setNumberStation(10);
+
+        int expected = 10;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldInitFieldsMaxSound(){
         Radio100 radio100 = new Radio100();
         assertEquals(100, radio100.getMaxSound());
@@ -73,7 +185,7 @@ class Radio100Test {
         assertEquals(expected, actual);
     }
     @Test
-    public void Sound101() {
+    public void sound101() {
         Radio100 cond = new Radio100();
         cond.setCurrentSound(101);
 
@@ -92,6 +204,7 @@ class Radio100Test {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void sound_1() {
         Radio100 cond = new Radio100();
@@ -361,8 +474,6 @@ class Radio100Test {
     }
 
 
-
-
     @Test
     public void increaseStation0() {
         Radio100 cond = new Radio100();
@@ -374,7 +485,6 @@ class Radio100Test {
 
         assertEquals(expected, actual);
     }
-
 
 
     @Test
