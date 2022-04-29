@@ -17,15 +17,13 @@ public class Radio100 {
         this.numberStation = numberStation;
     }
 
-    public int getNumberStation() {
-        return numberStation;
-    }
+    public int getNumberStation() {return numberStation;}
 
     public void setNumberStation(int newNumberStation) {
         if (newNumberStation < 0) {
             return;
         }
-        if (newNumberStation >= 10) {
+        if (newNumberStation >= 20) {
             return;
         }
         numberStation = newNumberStation;
@@ -124,9 +122,10 @@ public class Radio100 {
 
         }
     }
-
-
 }
+
+
+
 
 
 

@@ -45,10 +45,10 @@ class Radio100Test {
 
     @Test
     public void numberStation15() {
-        Radio100 cond = new Radio100();
+        Radio100 cond = new Radio100(20);
         cond.setNumberStation(15);
 
-        int expected = 10;
+        int expected = 15;
         int actual = cond.getNumberStation();
 
         assertEquals(expected, actual);
@@ -114,20 +114,11 @@ class Radio100Test {
     }
     @Test
     public void numberStation20() {
-        Radio100 cond = new Radio100(20);
+        Radio100 cond = new Radio100();
         cond.setNumberStation(15);
 
+
         int expected = 15;
-        int actual = cond.getNumberStation();
-
-        assertEquals(expected, actual);
-    }
-    @Test
-    public void numberStation11() {
-        Radio100 cond = new Radio100(10);
-        cond.setNumberStation(11);
-
-        int expected = 10;
         int actual = cond.getNumberStation();
 
         assertEquals(expected, actual);
