@@ -141,6 +141,15 @@ class Radio100Test {
 
         assertEquals(expected, actual);
     }
+    @Test
+    public void numberStation_13() {
+        Radio100 cond = new Radio100(13);
+
+        int expected = 13;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
 
     @Test
     public void numberStation10() {
