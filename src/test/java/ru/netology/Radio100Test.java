@@ -55,10 +55,10 @@ class Radio100Test {
     @Test
     public void numberStation() {
         Radio100 cond = new Radio100(20);
-        cond.setNumberStation(15);
+        cond.setCurrentStation(15);
 
         int expected = 15;
-        int actual = cond.getNumberStation();
+        int actual = cond.getCurrentStation();
 
         assertEquals(expected, actual);
     }

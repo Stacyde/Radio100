@@ -89,10 +89,13 @@ public class Radio100 {
             return;
         }
         if (newCurrentStation > 9) {
+        }
+        if (newCurrentStation >= numberStation) {
             return;
         }
-        currentStation = newCurrentStation;
-    }
+            currentStation = newCurrentStation;
+        }
+
 
     public void increaseSound() {
         if (currentSound < 100) {
