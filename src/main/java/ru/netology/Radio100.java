@@ -9,6 +9,7 @@ public class Radio100 {
     private int maxStation = 9;
     private int minStation = 0;
     private int numberStation = 10;
+    private int numberSound = 101;
 
     public Radio100() {
     }
@@ -21,17 +22,32 @@ public class Radio100 {
         return numberStation;
     }
 
+    public int getNumberSound() {
+        return numberSound;
+    }
+
     public void setNumberStation(int newNumberStation) {
         if (newNumberStation < 0) {
             return;
         }
         if (newNumberStation > 10) {
-
         }
-        if (newNumberStation > numberStation) {
+        if (newNumberStation >= numberStation) {
             return;
         }
         numberStation = newNumberStation;
+    }
+
+    public void setNumberSound(int newNumberSound) {
+        if (newNumberSound < 0) {
+            return;
+        }
+        if (newNumberSound > 101) {
+        }
+        if (newNumberSound >= numberSound) {
+            return;
+        }
+        numberSound = newNumberSound;
     }
 
     public int getCurrentSound() {
@@ -46,7 +62,10 @@ public class Radio100 {
         return maxSound;
     }
 
-    public void setMaxSound(int maxSound) {
+    public void setMaxSound(int newMaxSound) {
+        if (newMaxSound > maxSound) {
+            return;
+        }
         this.maxSound = maxSound;
     }
 
@@ -54,7 +73,10 @@ public class Radio100 {
         return maxStation;
     }
 
-    public void setMaxStation(int maxStation) {
+    public void setMaxStation(int newMaxStation) {
+        if (newMaxStation > maxStation) {
+            return;
+        }
         this.maxStation = maxStation;
     }
 
@@ -62,7 +84,10 @@ public class Radio100 {
         return minSound;
     }
 
-    public void setMinSound(int minSound) {
+    public void setMinSound(int newMinSound) {
+        if (newMinSound < minSound) {
+            return;
+        }
         this.minSound = minSound;
     }
 
@@ -70,7 +95,10 @@ public class Radio100 {
         return minStation;
     }
 
-    public void setMinStation(int minStation) {
+    public void setMinStation(int newMinStation) {
+        if (newMinStation > minStation) {
+            return;
+        }
         this.minStation = minStation;
     }
 
@@ -78,7 +106,9 @@ public class Radio100 {
         if (newCurrentSound < 0) {
             return;
         }
-        if (newCurrentSound > 100) {
+        if (newCurrentSound >= 100) {
+        }
+        if (newCurrentSound >= numberSound) {
             return;
         }
         currentSound = newCurrentSound;
@@ -93,8 +123,8 @@ public class Radio100 {
         if (newCurrentStation >= numberStation) {
             return;
         }
-            currentStation = newCurrentStation;
-        }
+        currentStation = newCurrentStation;
+    }
 
 
     public void increaseSound() {
@@ -117,7 +147,6 @@ public class Radio100 {
         if (currentSound <= 0) {
             currentSound = 0;
         } else {
-
             currentSound = currentSound - 1;
         }
     }
@@ -127,7 +156,6 @@ public class Radio100 {
             currentStation = 10;
         } else {
             currentStation = currentStation - 1;
-
         }
     }
 }
