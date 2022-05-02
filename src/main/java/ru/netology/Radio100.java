@@ -11,6 +11,7 @@ public class Radio100 {
     private int numberStation = 10;
     private int numberSound = 101;
 
+
     public Radio100() {
     }
 
@@ -157,6 +158,27 @@ public class Radio100 {
         } else {
             currentStation = currentStation - 1;
         }
+    }
+    public void reduceNumberStation( int NewNumberStation) {
+        if (NewNumberStation > 0) {
+            numberStation = NewNumberStation - 1;
+        } else {
+            NewNumberStation = 0;
+        }
+    }
+    public void increaseNumberStation( int NewNumberStation) {
+        if (NewNumberStation > numberStation) {
+            numberStation = NewNumberStation + 1;
+            return;
+        }
+
+        if (NewNumberStation < numberStation) {
+            NewNumberStation = numberStation;
+
+        }
+
+
+
     }
 }
 

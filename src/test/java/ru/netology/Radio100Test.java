@@ -364,14 +364,27 @@ class Radio100Test {
     @Test
     public void numberStation27() {
         Radio100 cond = new Radio100(27);
-        cond.setCurrentStation(9);
-        cond.reduceStation();
+        cond.setNumberStation(0);
+        cond.reduceNumberStation(27);
 
-        int expected = 8;
-        int actual = cond.getCurrentStation();
+        int expected = 26;
+        int actual = cond.getNumberStation();
 
         assertEquals(expected, actual);
     }
+    @Test
+    public void numberStation28() {
+        Radio100 cond = new Radio100(28);
+        cond.setNumberStation(29);
+        cond.increaseNumberStation(28);
+
+        int expected = 28;
+        int actual = cond.getNumberStation();
+
+        assertEquals(expected, actual);
+    }
+
+
 
     @Test
     public void numberStation10() {
