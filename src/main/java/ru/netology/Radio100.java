@@ -17,6 +17,8 @@ public class Radio100 {
 
     public Radio100(int numberStation) {
         this.numberStation = numberStation;
+        this.maxStation = numberStation;
+
     }
 
     public int getNumberStation() {
@@ -159,22 +161,18 @@ public class Radio100 {
             currentStation = currentStation - 1;
         }
     }
-    public void reduceNumberStation( int NewNumberStation) {
-        if (NewNumberStation > 0) {
-            numberStation = NewNumberStation - 1;
+    public void reduceNumberStation() {
+        if ( maxStation > 0) {
+            numberStation = maxStation - 1;
         } else {
-            NewNumberStation = 0;
+            maxStation = 0;
         }
     }
-    public void increaseNumberStation( int NewNumberStation) {
-        if (NewNumberStation > numberStation) {
-            numberStation = NewNumberStation + 1;
-            return;
-        }
-
-        if (NewNumberStation < numberStation) {
-            NewNumberStation = numberStation;
-
+    public void increaseNumberStation() {
+        if (maxStation > 0) {
+            numberStation = maxStation + 1;
+        }if (numberStation > maxStation){
+            numberStation = maxStation;
         }
 
 
