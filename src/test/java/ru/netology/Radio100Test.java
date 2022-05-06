@@ -210,7 +210,7 @@ class Radio100Test {
     public void radio1() {
         Radio100 cond = new Radio100(1);
         cond.setMaxStation(9);
-        int expected = 9;
+        int expected = 1;
         int actual = cond.getMaxStation();
 
         assertEquals(expected, actual);
@@ -220,7 +220,7 @@ class Radio100Test {
     public void radio2() {
         Radio100 cond = new Radio100(2);
         cond.setMaxStation(10);
-        int expected = 9;
+        int expected = 2;
         int actual = cond.getMaxStation();
 
         assertEquals(expected, actual);
@@ -230,7 +230,7 @@ class Radio100Test {
     public void radio5() {
         Radio100 cond = new Radio100(5);
         cond.setMaxStation(5);
-        int expected = 9;
+        int expected = 5;
         int actual = cond.getMaxStation();
 
         assertEquals(expected, actual);
